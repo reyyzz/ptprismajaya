@@ -1,0 +1,60 @@
+import {
+  serviceIntro,
+  serviceItems,
+  serviceStatsIntro,
+  serviceTeam,
+} from '../data/siteData'
+
+function ServicePage() {
+  return (
+    <main className="service-page">
+      <section className="section page-hero patterned">
+        <div className="container centered narrow">
+          <p className="subtitle">{serviceIntro.subtitle}</p>
+          <h1>{serviceIntro.title}</h1>
+          <p>{serviceIntro.description}</p>
+        </div>
+      </section>
+
+      <section className="section service-team-section">
+        <div className="container centered">
+          <h2>Our Service Team</h2>
+          <div className="service-team-grid">
+            {serviceTeam.map((team) => (
+              <article key={team.title} className="service-team-card">
+                <img src={team.image} alt={team.title} loading="lazy" />
+                <h3>{team.title}</h3>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section service-list-section patterned-alt">
+        <div className="container centered">
+          <p className="subtitle">PT BUKAKAINTI AIRCON</p>
+          <h2>Our Services</h2>
+
+          <div className="service-grid">
+            {serviceItems.map((item) => (
+              <article key={item.title} className="service-card">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section service-stats-section">
+        <div className="container centered narrow">
+          <p className="subtitle">Success Rating</p>
+          <h2>Our Data Statistic Results</h2>
+          <p>{serviceStatsIntro}</p>
+        </div>
+      </section>
+    </main>
+  )
+}
+
+export default ServicePage
