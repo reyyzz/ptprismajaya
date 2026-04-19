@@ -45,6 +45,8 @@ This app requires a Node.js runtime for SSR.
 
 - Suitable: Vercel, Render, Railway, VPS, or any Node hosting.
 - Not suitable for SSR: GitHub Pages (static hosting only).
+- Vercel SSR routing is configured in `vercel.json` and handled by `api/index.js`.
+- Keep Vercel Build Command as `npm run build` (already set in `vercel.json`).
 
 ## Google Search Console Checklist
 
