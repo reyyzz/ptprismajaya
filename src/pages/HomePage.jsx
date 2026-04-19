@@ -120,20 +120,11 @@ function HomePage() {
           </p>
 
           <div className="logo-grid-wrapper">
-            <div className="logo-row logo-row-top">
-              {clientLogos.slice(0, 3).map((logo) => (
-                <figure key={logo.name} className="logo-card">
-                  <img src={logo.path} alt={logo.name} loading="lazy" />
-                </figure>
-              ))}
-            </div>
-            <div className="logo-row logo-row-bottom">
-              {clientLogos.slice(3).map((logo) => (
-                <figure key={logo.name} className="logo-card">
-                  <img src={logo.path} alt={logo.name} loading="lazy" />
-                </figure>
-              ))}
-            </div>
+            {clientLogos.map((logo) => (
+              <figure key={logo.name} className="logo-card">
+                <img src={logo.path} alt={logo.name} loading="lazy" />
+              </figure>
+            ))}
           </div>
 
           <a

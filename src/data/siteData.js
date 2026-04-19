@@ -37,7 +37,7 @@ export const contactsPageOffices = [
 ]
 
 export const heroSlides = [
-  { image: '/assets/images/gallery/chillerbantulmalang/cbm1.jpeg', alt: 'Chiller Installation Bantul Malang' },
+  { image: '/assets/images/gallery/chillerbantulmalang/cbm1.jpeg', alt: 'Chiller Installation Bentoel Malang' },
   { image: '/assets/images/gallery/chillerwestinbali/cwb2.jpeg', alt: 'Chiller Westin ITDC Bali' },
   { image: '/assets/images/gallery/coolingtowerbali/ctb3.jpeg', alt: 'Cooling Tower Intercontinental Bali' },
   { image: '/assets/images/gallery/rockhotelbali/rhb1.jpeg', alt: 'Panel Hard Rock Hotel Bali' },
@@ -78,6 +78,7 @@ export const clientLogos = [
   { path: '/assets/images/logos/itdc1-removebg-preview.png', name: 'InterContinental Bali Resort' },
   { path: '/assets/images/logos/hardrock1-removebg-preview.png', name: 'Hard Rock Hotel Bali' },
   { path: '/assets/images/logos/bentul1-removebg-preview.png', name: 'Bentoel Group' },
+  { path: '/assets/images/logos/nusadua1-removebg-preview.png', name: 'Nusa Dua Beach Hotel' },
 ]
 
 export const chooseReasons = [
@@ -294,8 +295,21 @@ export const serviceStats = [
 
 export const galleryProjects = [
   {
+    id: 'fcunusaduabali',
+    title: 'FCU Installation — Nusa Dua, Bali',
+    images: [
+      '/assets/images/gallery/nusadua/nusadua2.jpeg',
+      '/assets/images/gallery/nusadua/nusadua3.jpeg',
+      '/assets/images/gallery/nusadua/nusadua4.jpeg',
+      '/assets/images/gallery/nusadua/nusadua5.jpeg',
+      '/assets/images/gallery/nusadua/nusadua6.jpeg',
+      '/assets/images/gallery/nusadua/nusadua7.jpeg',
+      '/assets/images/gallery/nusadua/nusadua8.jpeg',
+    ],
+  },
+  {
     id: 'chillerbantulmalang',
-    title: 'Chiller Installation — Bantul, Malang',
+    title: 'Chiller Installation — Bentoel, Malang',
     images: [
       '/assets/images/gallery/chillerbantulmalang/cbm1.jpeg',
       '/assets/images/gallery/chillerbantulmalang/cbm2.jpeg',

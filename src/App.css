@@ -625,21 +625,9 @@ body {
   margin: 36px auto 18px;
   max-width: 900px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-}
-
-.logo-row {
-  display: grid;
-  gap: 20px;
-}
-
-.logo-row-top {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.logo-row-bottom {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .logo-card {
@@ -648,6 +636,7 @@ body {
   border: 1px solid var(--bia-border);
   border-radius: 14px;
   min-height: 160px;
+  width: calc(33.333% - 14px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1558,8 +1547,6 @@ body {
   }
 
   .feature-grid,
-  .logo-row-top,
-  .logo-row-bottom,
   .reason-grid,
   .news-grid,
   .video-grid,
@@ -1570,6 +1557,10 @@ body {
   .footer-grid,
   .gallery-grid-large {
     grid-template-columns: 1fr;
+  }
+
+  .logo-card {
+    width: 100%;
   }
 
   .testimonial-card {
