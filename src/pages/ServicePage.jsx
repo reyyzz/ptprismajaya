@@ -4,10 +4,13 @@ import {
   serviceStatsIntro,
   serviceTeam,
 } from '../data/siteData'
+import { useScrollReveal } from '../hooks/useScrollReveal'
 
 function ServicePage() {
+  const revealRef = useScrollReveal()
+
   return (
-    <main className="service-page">
+    <main className="service-page" ref={revealRef}>
       <section className="section page-hero patterned">
         <div className="container centered narrow">
           <p className="subtitle">{serviceIntro.subtitle}</p>
@@ -32,7 +35,7 @@ function ServicePage() {
 
       <section className="section service-list-section patterned-alt">
         <div className="container centered">
-          <p className="subtitle">PT BUKAKAINTI AIRCON</p>
+          <p className="subtitle">PT. Prisma Cahaya Lestari</p>
           <h2>Our Services</h2>
 
           <div className="service-grid">

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { contactsPageOffices } from '../data/siteData'
+import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const initialFormState = {
   name: '',
@@ -23,8 +24,10 @@ function ContactsPage() {
     setForm(initialFormState)
   }
 
+  const revealRef = useScrollReveal()
+
   return (
-    <main className="contacts-page">
+    <main className="contacts-page" ref={revealRef}>
       <section className="section page-hero patterned">
         <div className="container centered narrow">
           <p className="subtitle">Contact Us</p>

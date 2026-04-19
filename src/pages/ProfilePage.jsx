@@ -4,10 +4,13 @@ import {
   aboutUsIntro,
   aboutUsTeam,
 } from '../data/siteData'
+import { useScrollReveal } from '../hooks/useScrollReveal'
 
 function ProfilePage() {
+  const revealRef = useScrollReveal()
+
   return (
-    <main className="profile-page">
+    <main className="profile-page" ref={revealRef}>
       <section className="section page-hero patterned">
         <div className="container centered narrow">
           <p className="subtitle">{aboutUsIntro.subtitle}</p>
@@ -44,7 +47,7 @@ function ProfilePage() {
           </article>
 
           <article className="profile-card">
-            <p className="subtitle">PT. BUKAKAINTI AIRCON</p>
+            <p className="subtitle">PT. Prisma Cahaya Lestari</p>
             <h2>{aboutUsCommitment.title}</h2>
             <p>{aboutUsCommitment.description}</p>
             <p>{aboutUsCommitment.description2}</p>

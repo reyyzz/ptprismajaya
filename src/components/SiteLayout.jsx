@@ -1,11 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { navigationItems, officeContacts, socialLinks } from '../data/siteData'
 
 function SiteLayout() {
   const location = useLocation()
   const [mobileMenuOpenPath, setMobileMenuOpenPath] = useState(null)
+  const [isScrolled, setIsScrolled] = useState(false)
   const isMobileMenuOpen = mobileMenuOpenPath === location.pathname
+  const isHome = location.pathname === '/'
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 40)
+    }
+    handleScroll()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const toggleMobileMenu = () => {
     setMobileMenuOpenPath((prevPath) => (prevPath === location.pathname ? null : location.pathname))
@@ -15,12 +26,14 @@ function SiteLayout() {
     setMobileMenuOpenPath(null)
   }
 
+  const topbarClass = `topbar${isScrolled ? ' topbar-scrolled' : ''}`
+
   return (
     <div className="app-shell">
-      <header className="topbar">
+      <header className={topbarClass}>
         <div className="container topbar-inner">
-          <NavLink to="/" className="brand" aria-label="BUKAKAINTI AIRCON home">
-            <img src="/assets/images/brand/logo.webp" alt="BUKAKAINTI AIRCON" />
+          <NavLink to="/" className="brand" aria-label="PT. Prisma Cahaya Lestari home">
+            <img src="/assets/images/brand/logo-prisma.svg" alt="PT. Prisma Cahaya Lestari" />
           </NavLink>
 
           <nav className="desktop-nav" aria-label="Main navigation">
@@ -140,41 +153,63 @@ function SiteLayout() {
 
       <footer className="footer" id="footer">
         <div className="container footer-grid">
-          <section>
-            <h2>
-              Get in Touch <span>with Us</span>
-            </h2>
-            <ul className="social-links">
+          <section className="footer-brand">
+            <div className="footer-logo">
+              <img src="/assets/images/brand/logo-prisma.svg" alt="PT. Prisma Cahaya Lestari" className="footer-logo-img" />
+            </div>
+            <p className="footer-description">
+              PT. Prisma Cahaya Lestari — your trusted partner for professional air conditioning, AHU modification, exhaust fan installation, and MEP services across Indonesia.
+            </p>
+            <ul className="footer-socials">
               {socialLinks.map((social) => (
                 <li key={social.label}>
-                  <a href={social.href} target="_blank" rel="noreferrer">
-                    {social.label}
+                  <a href={social.href} target="_blank" rel="noreferrer" aria-label={social.label}>
+                    {social.label.charAt(0)}
                   </a>
                 </li>
               ))}
             </ul>
           </section>
 
-          {officeContacts.map((office) => (
-            <section key={office.title}>
-              <h3>{office.title}</h3>
-              <address>
-                {office.lines.map((line) => (
-                  <span key={line}>{line}</span>
-                ))}
-                {office.phones.map((phone) => (
-                  <a key={phone} href={`tel:${phone.replace(/[^+\d]/g, '')}`}>
-                    {phone}
-                  </a>
-                ))}
-                {office.email ? <a href={`mailto:${office.email}`}>{office.email}</a> : null}
-              </address>
-            </section>
-          ))}
+          <section className="footer-links">
+            <h4>NAVIGATION</h4>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/profile/about-us">About Us</a></li>
+              <li><a href="/gallery">Gallery</a></li>
+              <li><a href="/contacts">Contacts</a></li>
+            </ul>
+          </section>
+
+          <section className="footer-links">
+            <h4>SERVICES</h4>
+            <ul>
+              <li><a href="/profile/service">Air Conditioning Works</a></li>
+              <li><a href="/profile/service">AHU Modification</a></li>
+              <li><a href="/profile/service">Exhaust Fan Installation</a></li>
+              <li><a href="/profile/service">Testing & Commissioning</a></li>
+            </ul>
+          </section>
+
+          <section className="footer-contact">
+            <h4>CONTACT</h4>
+            <div className="footer-contact-item">
+              <span className="footer-contact-icon">📍</span>
+              <span>Jl. Pumpungan III-B / 27,<br/>Ruko Manyar Mas, Surabaya</span>
+            </div>
+            <div className="footer-contact-item">
+              <span className="footer-contact-icon">📞</span>
+              <span>0811-306-520</span>
+            </div>
+            <div className="footer-contact-item">
+              <span className="footer-contact-icon">✉️</span>
+              <a href="mailto:info@prismacahayalestari.com">info@prismacahayalestari.com</a>
+            </div>
+          </section>
         </div>
 
         <div className="container copyright">
-          Copyright by PT. Bukaka Inti Aircon. All rights reserved.
+          © 2026 PT. Prisma Cahaya Lestari. All rights reserved.
         </div>
       </footer>
     </div>

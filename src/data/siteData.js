@@ -13,91 +13,61 @@ export const navigationItems = [
 ]
 
 export const socialLinks = [
-  { label: 'Facebook', href: 'https://www.facebook.com/bukakaintiaircon/' },
-  {
-    label: 'YouTube',
-    href: 'https://www.youtube.com/channel/UCTQqzMoGmrilRe74Li9kAmQ',
-  },
-  { label: 'Instagram', href: 'https://www.instagram.com/bukakaintiaircon/' },
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/company/bukakaintiaircon/?viewAsMember=true',
-  },
+  { label: 'Facebook', href: '#' },
+  { label: 'Instagram', href: '#' },
+  { label: 'LinkedIn', href: '#' },
 ]
 
 export const officeContacts = [
   {
-    title: 'Jakarta Office',
-    lines: ['Jl. Perjuangan No. 22,', 'Kebun Jeruk, Jakbar 11530'],
-    phones: ['(+62 21) 5366 2434'],
-    email: 'jktoffice@bukakainti.com',
-  },
-  {
-    title: 'Surabaya Office',
-    lines: ['Jl. Rungkut Mapan Tengah IV DC-20, Surabaya 60293'],
-    phones: ['(+62 31) 9900 4529', '(+62 31) 9900 4530'],
-    email: 'sbyoffice@bukakainti.com',
-  },
-  {
-    title: 'Jakarta Workshop',
-    lines: ['Jl. Perjuangan No. 22,', 'Kebun Jeruk, Jakbar 11530'],
-    phones: ['(+62 21) 5366 2434'],
+    title: 'Head Office',
+    lines: ['Jl. Pumpungan III-B / 27', 'Ruko Manyar Mas, Surabaya'],
+    phones: ['0811-306-520'],
+    email: 'info@prismacahayalestari.com',
   },
 ]
 
 export const contactsPageOffices = [
   {
-    title: 'Jakarta Office',
-    lines: ['Jl. Perjuangan No. 22,', 'Kebun Jeruk, JakBar 11480'],
-    phones: ['(+62 21) 5366 2434'],
-    email: 'jktoffice@bukakainti.com',
-  },
-  {
-    title: 'Surabaya Office',
-    lines: ['Jl. Rungkut Mapan Tengah IV DC-20, Surabaya 60293'],
-    phones: ['(+62 31) 9900 4529', '(+62 31) 9900 4530'],
-    email: 'sbyoffice@bukakainti.com',
-  },
-  {
-    title: 'Jakarta Workshop',
-    lines: [
-      'Jl. Anggrek Neli Murni IIA Blok C-12A,',
-      'Kemanggisan - Slipi, JakBar 11480',
-    ],
-    phones: ['(+62 21) 5366 2434'],
+    title: 'Head Office',
+    lines: ['Jl. Pumpungan III-B / 27', 'Ruko Manyar Mas, Surabaya'],
+    phones: ['0811-306-520'],
+    email: 'info@prismacahayalestari.com',
   },
 ]
 
 export const heroSlides = [
-  { image: '/assets/images/hero/home.png', alt: 'Home' },
-  { image: '/assets/images/hero/design-10.png', alt: 'Integrated HVAC' },
-  { image: '/assets/images/hero/digital-imaging-vrf.jpg', alt: 'VRF' },
+  { image: '/assets/images/gallery/chillerbantulmalang/cbm1.jpeg', alt: 'Chiller Installation Bantul Malang' },
+  { image: '/assets/images/gallery/chillerwestinbali/cwb2.jpeg', alt: 'Chiller Westin ITDC Bali' },
+  { image: '/assets/images/gallery/coolingtowerbali/ctb3.jpeg', alt: 'Cooling Tower Intercontinental Bali' },
+  { image: '/assets/images/gallery/rockhotelbali/rhb1.jpeg', alt: 'Panel Hard Rock Hotel Bali' },
+  { image: '/assets/images/gallery/cimbniagajakarta/cimbniaga1.jpeg', alt: 'Cooling Tower CIMB Niaga Jakarta' },
 ]
 
 export const featureCards = [
   {
     number: '01',
-    title: 'Certified Expert Engineer',
+    title: 'Air Conditioning Works',
     description:
-      'With national certification and ISO9001 accreditation, we host a specialized team of over a hundred engineers to ensure comprehensive solutions for diverse needs.',
+      'Complete air conditioning installation services including fresh volume dampers, fresh air ducts, return air grilles, pipe FCU reconditioning, and main duct supply reconditioning for optimal climate control.',
   },
   {
     number: '02',
-    title: 'On Time & On Track',
+    title: 'AHU Modification & UV Filter',
     description:
-      "Stay on schedule with our commitment to punctuality and exceptional teamwork. Our equipment installations align seamlessly with clients' contracts, ensuring optimal results.",
+      'Professional AHU modification and UV filter installation services. We handle fresh air grille installation, UV filter unit setup, and existing AHU unit modifications to enhance air quality and system efficiency.',
   },
   {
     number: '03',
-    title: 'Maintenance Services',
+    title: 'Exhaust Fan Installation',
     description:
-      "Beyond installations, elevate your facility's longevity with our preventive maintenance services. From regular inspections to on-site repairs, we're ready to minimize unexpected downtimes.",
+      'Supply and installation of ceiling fan units, volume dampers, duct modifications, and ceiling reconditioning. Complete exhaust system solutions with premium materials and precision fitting.',
   },
   {
     number: '04',
-    title: 'After Sales Support',
+    title: 'Testing & Commissioning',
     description:
-      'After-sales excellence is our commitment. Anticipating your needs, we provide a dedicated and professional support team with continuous assistance for addressing your queries.',
+      'Every project is completed with rigorous testing and commissioning procedures to ensure all systems operate at peak performance before handover to the client.',
   },
 ]
 
@@ -130,136 +100,135 @@ export const clientLogos = [
 
 export const chooseReasons = [
   {
-    image: '/assets/images/choose/reason-1.png',
-    text: '+17 years of experience with comprehensive services.',
+    image: '/assets/images/gallery/chillerbantulmalang/cbm3.jpeg',
+    text: 'Years of experience in air conditioning installation, AHU modification, and exhaust fan systems.',
   },
   {
-    image: '/assets/images/choose/reason-2.png',
-    text: "The one and only Clivet Italy's official agent in Indonesia.",
+    image: '/assets/images/gallery/chillerwestinbali/cwb4.jpeg',
+    text: 'Specialized in HVAC ducting, volume damper supply & installation, and ceiling reconditioning.',
   },
   {
-    image: '/assets/images/choose/reason-3.png',
-    text: 'Highly trained professionals with licenses and certificates.',
+    image: '/assets/images/gallery/coolingtowerbali/ctb4.jpeg',
+    text: 'Highly trained professionals delivering quality results on hotel and commercial building projects.',
   },
 ]
 
 export const testimonials = [
   {
     quote:
-      '"The use of Clivet chillers is proven to be more efficient in energy use and faster in getting the desired temperature"',
-    name: 'Fardy',
-    role: 'Chief Enginering Novotel Palembang',
+      '"PT. Prisma Cahaya Lestari delivered outstanding installation work on our HVAC ducting system. Professional, on time, and excellent quality."',
+    name: 'Project Manager',
+    role: 'Nusa Dua Beach Hotel',
   },
   {
     quote:
-      '"Clivet units used at PT Imfarmind Farmasi Industri are 3 units with Clivet providing assurance of the quality of the air produced as needed. Clivet is reliable and trusted"',
-    name: 'Dini Tauriadi',
-    role: 'Quality Assurance Manager PT Imfarmind Farmasi Industri',
+      '"The team\'s expertise in ceiling fan installation and volume damper fitting was impressive. Every detail was handled with precision."',
+    name: 'Facility Manager',
+    role: 'Hard Rock Hotel Bali',
   },
   {
     quote:
-      '"The Clivet unit at IKEA JGC is very good and until now there have been no significant problems and support from the after sales team"',
-    name: 'Aulia Rahman',
-    role: 'Facility Manager IKEA JGC',
+      '"From duct modification to testing and commissioning, PT. Prisma Cahaya Lestari provided end-to-end service that exceeded our expectations."',
+    name: 'Building Owner',
+    role: 'CIMB Niaga Jakarta',
   },
 ]
 
 export const coreValues = [
   {
-    title: 'LIFE',
-    image: '/assets/images/values/life.webp',
+    title: 'QUALITY',
+    image: '/assets/images/gallery/chillerbantulmalang/cbm2.jpeg',
     description:
-      'We are deeply committed to secure a better future for our children. By prioritizing energy-efficient eco-friendly HVAC solutions, we contribute to a healthier environment, ensuring a legacy of clean air and sustainable living.',
+      'We are committed to delivering the highest quality in every installation and service project. Our rigorous quality standards ensure every system performs at its best.',
   },
   {
     title: 'INNOVATION',
-    image: '/assets/images/values/innovation.webp',
+    image: '/assets/images/gallery/chillerwestinbali/cwb3.jpeg',
     description:
-      'Fueled by passion and curiosity, we drive innovation with advanced technologies. Through creativity and forward-thinking, we strive to reshape the HVAC industry, setting benchmarks that not only meet but exceed expectations.',
+      'Fueled by passion and expertise, we drive innovation with advanced installation techniques and modern MEP solutions that set new benchmarks in the industry.',
   },
   {
-    title: 'VISION',
-    image: '/assets/images/values/vision.webp',
+    title: 'PRECISION',
+    image: '/assets/images/gallery/rockhotelbali/rhb3.jpeg',
     description:
-      'We envision a future where comfort meets efficiency seamlessly. Using cutting-edge tech and integrated systems, we make superior HVAC experiences not just a vision but a reality, anticipating and exceeding your evolving needs.',
+      'Every duct fitting, every damper installation, and every commissioning process is executed with meticulous precision to ensure optimal system performance.',
   },
   {
-    title: 'ENERGY',
-    image: '/assets/images/values/energy.webp',
+    title: 'INTEGRITY',
+    image: '/assets/images/gallery/coolingtowerbali/ctb2.jpeg',
     description:
-      "As a pioneer in sustainable energy practices, we're your partners in embracing eco-friendly solutions. From renewable sources to energy-efficient options, we're committed to making a positive impact on the environment.",
+      'We build lasting partnerships through transparency, reliability, and honest communication. Our clients trust us because we deliver on every promise.',
   },
 ]
 
 export const newsArticles = [
   {
-    title: 'Mengenal Chilled Water System dan Cara Kerjanya',
+    title: 'Understanding HVAC Ducting Systems and Their Applications',
     date: 'January 30, 2026',
     image: '/assets/images/news/chilled-water-system.png',
-    href: 'https://bukakainti.com/sistem-pendingin-membutuhkan-oil-analysis-serahkan-pada-bukaka-inti/',
+    href: '#',
   },
   {
-    title: 'Gunakan Economizer untuk Meningkatkan Efisiensi Sistem HVAC Properti Anda',
+    title: 'The Importance of Proper Volume Damper Installation',
     date: 'January 25, 2026',
     image: '/assets/images/news/economizer.png',
-    href: 'https://bukakainti.com/gunakan-economizer-untuk-meningkatkan-efisiensi-sistem-hvac-properti-anda/',
+    href: '#',
   },
   {
-    title: 'Sistem Pendingin Membutuhkan Oil Analysis? Serahkan pada Bukaka Inti!',
+    title: 'Best Practices in Ceiling Fan Unit Installation for Commercial Spaces',
     date: 'January 10, 2026',
     image: '/assets/images/news/oil-analysis.png',
-    href: 'https://bukakainti.com/sistem-pendingin-membutuhkan-oil-analysis-serahkan-pada-bukaka-inti-2/',
+    href: '#',
   },
 ]
 
 export const videoStories = [
   {
-    title: 'Solusi HVAC Hotel The Hive Tamansari Jakarta',
-    source: 'PT. Bukaka Inti Aircon',
+    title: 'HVAC Installation Project Highlight',
+    source: 'PT. Prisma Cahaya Lestari',
     image: '/assets/images/hero/home.png',
-    href: 'https://www.youtube.com/channel/UCTQqzMoGmrilRe74Li9kAmQ',
+    href: '#',
   },
   {
-    title: 'Retrofitting The Future: Unveiling the Clivet Magline Evo',
-    source: 'PT. Bukaka Inti Aircon',
+    title: 'Ducting System Modification & Reconditioning',
+    source: 'PT. Prisma Cahaya Lestari',
     image: '/assets/images/hero/design-10.png',
-    href: 'https://www.youtube.com/channel/UCTQqzMoGmrilRe74Li9kAmQ',
+    href: '#',
   },
   {
-    title: 'Journey of Partnership - Comfort Connect 2025',
-    source: 'PT. Bukaka Inti Aircon',
+    title: 'Testing & Commissioning Process',
+    source: 'PT. Prisma Cahaya Lestari',
     image: '/assets/images/hero/digital-imaging-vrf.jpg',
-    href: 'https://www.youtube.com/channel/UCTQqzMoGmrilRe74Li9kAmQ',
+    href: '#',
   },
 ]
 
 export const aboutUsIntro = {
   subtitle: 'About Us',
-  title: 'PT BUKAKA INTI AIRCON',
+  title: 'PT. PRISMA CAHAYA LESTARI',
   description:
-    'At PT. BUKAKA INTI AIRCON, we are committed to providing the best service for your Heating, Ventilating, and Air Conditioning (HVAC) systems, especially your AC and chiller assets. Our goal is to ensure reliable performance and a comfortable environment.',
+    'PT. Prisma Cahaya Lestari is a trusted provider of Mechanical, Electrical, and Plumbing (MEP) services specializing in air conditioning works, AHU modification & UV filter installation, exhaust fan installation, volume damper supply & installation, ceiling reconditioning, and comprehensive testing & commissioning.',
 }
 
 export const aboutUsTeam = [
-  { name: 'Irwantino Susilo', role: 'Director' },
-  { name: 'Fandy Fajar Oktavianus', role: 'West General Manager' },
-  { name: 'YS. Parmanto Wahyudi', role: 'Business Development Manager' },
-  { name: 'Elisabeth Yoanita Widjaja', role: 'Head of Finance' },
-  { name: 'Agustinus S. Widartomo', role: 'Talent & Human Resource Head' },
-  { name: 'Permadi Sasrabahu', role: 'VRF Product Manager' },
-  { name: 'Damar Aditya', role: 'West Sales Leader' },
-  { name: 'Bagus & Kasiyanto', role: 'Team Leader Service West & East' },
-  { name: 'Diah Ratna', role: 'Technical Engineering Construction Leader' },
-  { name: 'Septian Nur A.H', role: 'Marketing Communication Specialist' },
-  { name: 'Eliana Syarief', role: 'HVAC System Analyst Specialist' },
+  { name: 'Director', role: 'Director' },
+  { name: 'Project Manager', role: 'Project Manager' },
+  { name: 'Site Engineer', role: 'Site Engineer' },
+  { name: 'MEP Designer', role: 'MEP Designer' },
+  { name: 'Quality Control', role: 'Quality Control' },
+  { name: 'Procurement', role: 'Procurement' },
+  { name: 'HSE Officer', role: 'HSE Officer' },
+  { name: 'Installation Supervisor', role: 'Installation Supervisor' },
+  { name: 'Commissioning Engineer', role: 'Commissioning Engineer' },
+  { name: 'Admin & Finance', role: 'Admin & Finance' },
 ]
 
 export const aboutUsHistory = {
   title: 'Our History',
   description:
-    'Established in 2006, BUKAKAINTI AIRCON emerged as a premier provider of chiller maintenance services. Beyond routine chiller maintenance, we design customized solutions at your location, select optimal units, deliver and construct on time, and much more - all aimed at delivering the best results for you and the stakeholders involved.',
+    'PT. Prisma Cahaya Lestari was established as a professional MEP services provider based in Surabaya, specializing in air conditioning works, AHU modification, exhaust fan installation, and building services. Over the years, we have grown to become a trusted partner for hotel and commercial projects across Indonesia.',
   description2:
-    'Throughout our history, sustainability has been at the core of our practices. Our goal is to contribute to your financial success while accompanying you in achieving a long-lasting, environmentally friendly, and sustainable cooling system.',
+    'Our commitment to quality, safety, and client satisfaction has driven our growth. We continue to expand our capabilities, from air conditioning installations and volume damper fitting to complete duct system modifications and ceiling reconditioning.',
 }
 
 export const aboutUsCommitment = {
@@ -267,104 +236,130 @@ export const aboutUsCommitment = {
   description:
     "We don't just talk about service quality; we practice it every day.",
   description2:
-    'As a nationally certified and ISO-9001 accredited company, we boast a team of over a seventy specialized engineers with extensive experience in the HVAC industry. Ready to provide comprehensive solutions, we listen and understand your specific needs, translating them into practical actions that set us apart.',
+    'As a professionally managed company, our team of specialized engineers and technicians brings extensive experience in MEP installation and commissioning. We listen to your specific needs and translate them into practical, high-quality solutions.',
 }
 
 export const serviceIntro = {
-  subtitle: 'PT. BUKAKAINTI AIRCON',
-  title: 'Professional Service',
+  subtitle: 'PT. Prisma Cahaya Lestari',
+  title: 'Professional Services',
   description:
-    "Renowned as the best in Indonesia, our Technical Service Division ensures that our clients' facilities operate in optimal condition.",
+    'Our expert team delivers comprehensive MEP installation and commissioning services, covering air conditioning works, AHU modification, exhaust fan installation, and more — ensuring every project meets the highest standards.',
 }
 
 export const serviceTeam = [
   {
-    title: 'West Technical Service Division',
-    image: '/assets/images/choose/reason-1.png',
+    title: 'Installation Division',
+    image: '/assets/images/gallery/rockhotelbali/rhb2.jpeg',
   },
   {
-    title: 'East Technical Service Division',
-    image: '/assets/images/choose/reason-2.png',
+    title: 'Commissioning Division',
+    image: '/assets/images/gallery/majapahit/majapahit1.jpeg',
   },
 ]
 
 export const serviceItems = [
   {
-    title: 'Maintenance Routine Visit & Repairing Job',
+    title: 'Air Conditioning Works',
     description:
-      'Need quick fixes? Ensure peak performance with our routine maintenance visits. Our expert technicians conduct thorough inspections, clean, and replace components, offering proactive solutions to prevent potential issues.',
+      'Complete air conditioning installation including fresh volume damper installation, fresh air duct installation, return air grille & duct installation, pipe FCU reconditioning, main duct supply reconditioning, and ceiling reconditioning.',
   },
   {
-    title: 'Tube Chemical-Mechanical Cleaning',
+    title: 'AHU Modification & UV Filter',
     description:
-      'Experience optimal efficiency with our specialized cleaning services. Our technicians employ both chemical and mechanical methods to ensure your system tubing always stays clean and free from corrosion.',
+      'Professional AHU modification services with additional UV filter installation. Includes fresh air grille installation, UV filter unit setup, AHU unit modification, and comprehensive testing & commissioning.',
   },
   {
-    title: 'Overhaul Chiller Unit',
+    title: 'Exhaust Fan Installation',
     description:
-      "Let's elevate your chiller longevity and performance with our comprehensive overhaul services. Our skilled technicians dismantle, clean, and replace components, guaranteeing your unit operates in its best condition.",
+      'Complete exhaust fan system including supply and installation of ceiling fan units, supply and installation of volume dampers, existing duct modification, ceiling reconditioning, and all fitting & supporting materials.',
   },
   {
-    title: 'Refrigerant Conversion',
+    title: 'Supply of Unit Volume Damper',
     description:
-      'Stay ahead of environmental regulations and enhance energy efficiency. Our technicians perform precise refrigerant conversions, complying with regulations and improving your system overall performance.',
+      'We supply high-quality volume dampers sourced from trusted manufacturers. Each unit is selected to match your system specifications, ensuring proper airflow control and energy efficiency across your HVAC network.',
   },
   {
-    title: 'Startup & Re-commissioning',
+    title: 'Modification of Existing Duct',
     description:
-      "Seamless system integration is key. Our experienced technicians ensure your cooling system functions optimally post-installation. From thorough inspections to prompt issue resolution, we've got you covered.",
+      'Comprehensive duct modification services including resizing, rerouting, and adapting existing ductwork to meet new building requirements. We minimize disruption while maximizing system efficiency.',
   },
   {
-    title: 'Technical Consultant & Training Program',
+    title: 'Reconditioning of Ceiling Existing',
     description:
-      'Level up your team expertise with our technical consultation and training programs. Our experienced consultants provide tailored advice, while training programs help empower your team.',
+      'Restore and revitalize existing ceiling systems to like-new condition. Our reconditioning services include cleaning, repair, panel replacement, and structural reinforcement for extended ceiling lifespan.',
   },
   {
-    title: 'Chiller Performance Analysis',
+    title: 'Fitting & Supporting Materials',
     description:
-      'Unlock insights into your cooling system efficiency. Our technicians conduct regular performance analyses, identifying improvement opportunities to keep your system at peak efficiency.',
+      'Supply and installation of all necessary fittings, brackets, hangers, and supporting materials for HVAC and ducting systems. We use premium-grade materials to ensure durability and structural integrity.',
   },
   {
-    title: 'Oil Analysis',
+    title: 'Testing & Commissioning',
     description:
-      'Besides central AC services, we provide oil analysis services. Regularly sampling and analyzing chiller oil helps detect potential issues, guide maintenance actions, and keep your system running smoothly.',
+      'Rigorous testing and commissioning of all installed systems to verify performance against design specifications. Our systematic approach ensures every component functions correctly before project handover.',
   },
 ]
 
 export const serviceStatsIntro =
-  'PT. BUKAKA INTI AIRCON is where expertise meets excellence. We have an excellent reputation for quality and provide responsive service 24/7 to satisfy our loyal customers.'
+  'PT. Prisma Cahaya Lestari is where expertise meets excellence. We have an excellent reputation for quality MEP installation and provide responsive service to satisfy our loyal customers.'
 
-export const galleryItems = [
+export const galleryProjects = [
   {
-    title: 'Factory Visit, Feltre Italia',
-    image: '/assets/images/gallery/gallery-1.webp',
+    id: 'chillerbantulmalang',
+    title: 'Chiller Installation — Bantul, Malang',
+    images: [
+      '/assets/images/gallery/chillerbantulmalang/cbm1.jpeg',
+      '/assets/images/gallery/chillerbantulmalang/cbm2.jpeg',
+      '/assets/images/gallery/chillerbantulmalang/cbm3.jpeg',
+      '/assets/images/gallery/chillerbantulmalang/cbm4.jpeg',
+    ],
   },
   {
-    title: 'Comfort Connect 2025',
-    image: '/assets/images/gallery/gallery-2.webp',
+    id: 'rockhotelbali',
+    title: 'Panel Installation — Hard Rock Hotel Bali',
+    images: [
+      '/assets/images/gallery/rockhotelbali/rhb1.jpeg',
+      '/assets/images/gallery/rockhotelbali/rhb2.jpeg',
+      '/assets/images/gallery/rockhotelbali/rhb3.jpeg',
+    ],
   },
   {
-    title: 'Best Partnership Consultant 2025',
-    image: '/assets/images/gallery/gallery-3.webp',
+    id: 'chillerwestinbali',
+    title: 'Chiller Installation — Westin ITDC Bali',
+    images: [
+      '/assets/images/gallery/chillerwestinbali/cwb1.jpeg',
+      '/assets/images/gallery/chillerwestinbali/cwb2.jpeg',
+      '/assets/images/gallery/chillerwestinbali/cwb3.jpeg',
+      '/assets/images/gallery/chillerwestinbali/cwb4.jpeg',
+    ],
   },
   {
-    title: 'CASC Event APPBI 2025',
-    image: '/assets/images/gallery/gallery-4.webp',
+    id: 'coolingtowerbali',
+    title: 'Cooling Tower Installation — Intercontinental Bali',
+    images: [
+      '/assets/images/gallery/coolingtowerbali/ctb.jpeg',
+      '/assets/images/gallery/coolingtowerbali/ctb1.jpeg',
+      '/assets/images/gallery/coolingtowerbali/ctb2.jpeg',
+      '/assets/images/gallery/coolingtowerbali/ctb3.jpeg',
+      '/assets/images/gallery/coolingtowerbali/ctb4.jpeg',
+    ],
   },
   {
-    title: 'Maintenance Team in Action',
-    image: '/assets/images/gallery/gallery-5.webp',
+    id: 'majapahit',
+    title: 'Pipe Jacketing — Majapahit Hotel Surabaya',
+    images: [
+      '/assets/images/gallery/majapahit/majapahit1.jpeg',
+    ],
   },
   {
-    title: 'Project Monitoring Session',
-    image: '/assets/images/gallery/gallery-6.webp',
-  },
-  {
-    title: 'HVAC Installation Milestone',
-    image: '/assets/images/gallery/gallery-7.webp',
-  },
-  {
-    title: 'Owner Gathering Documentation',
-    image: '/assets/images/gallery/gallery-8.webp',
+    id: 'cimbniagajakarta',
+    title: 'Cooling Tower Filter Replacement — CIMB Niaga Jakarta',
+    images: [
+      '/assets/images/gallery/cimbniagajakarta/cimbniaga1.jpeg',
+      '/assets/images/gallery/cimbniagajakarta/cimbniaga2.jpeg',
+      '/assets/images/gallery/cimbniagajakarta/cimbniaga3.jpeg',
+      '/assets/images/gallery/cimbniagajakarta/cimbniaga4.jpeg',
+      '/assets/images/gallery/cimbniagajakarta/cimbniaga5.jpeg',
+    ],
   },
 ]

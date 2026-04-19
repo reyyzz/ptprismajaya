@@ -1,13 +1,12 @@
 import { useEffect, useMemo, useState } from 'react'
+import { useScrollReveal } from '../hooks/useScrollReveal'
 import {
   chooseReasons,
   clientLogos,
   coreValues,
   featureCards,
   heroSlides,
-  newsArticles,
   testimonials,
-  videoStories,
 } from '../data/siteData'
 
 const heroIntervalMs = 5000
@@ -39,16 +38,6 @@ function HomePage() {
     [testimonialIndex],
   )
 
-  const prevHero = () => {
-    setHeroIndex((currentIndex) =>
-      currentIndex === 0 ? heroSlides.length - 1 : currentIndex - 1,
-    )
-  }
-
-  const nextHero = () => {
-    setHeroIndex((currentIndex) => (currentIndex + 1) % heroSlides.length)
-  }
-
   const prevTestimonial = () => {
     setTestimonialIndex((currentIndex) =>
       currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1,
@@ -58,78 +47,49 @@ function HomePage() {
   const nextTestimonial = () => {
     setTestimonialIndex((currentIndex) => (currentIndex + 1) % testimonials.length)
   }
+  const revealRef = useScrollReveal()
 
   return (
-    <main className="homepage">
+    <main className="home-page" ref={revealRef}>
       <section className="hero">
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <p className="subtitle">
-              INTEGRATED HVAC SOLUTION EXPERT AND ENERGY SAVING PARTNER
-            </p>
-            <h1>Elevate Comfort and Conserve Energy</h1>
-            <p>
-              As industry leaders in HVAC innovation, we provide fully integrated
-              solutions that enhance comfort, maximize energy savings, and drive
-              sustainability. Our cutting-edge technology and expert services help
-              businesses reduce operational costs, improve system performance, and
-              minimize environmental impact-because a smarter, greener future starts
-              today.
-            </p>
-            <a
-              href="https://bukakainti.com/references/"
-              className="button"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View Project Reference
-            </a>
-          </div>
+        <div className="hero-bg-slider">
+          {heroSlides.map((slide, index) => (
+            <div
+              key={slide.alt}
+              className={`hero-bg-slide ${index === heroIndex ? 'active' : ''}`}
+              style={{ backgroundImage: `url(${slide.image})` }}
+            />
+          ))}
+          <div className="hero-bg-overlay" />
+        </div>
 
-          <div className="hero-slider" aria-label="Hero slides">
-            <img src={currentHero.image} alt={currentHero.alt} />
-            <button
-              type="button"
-              className="slider-button prev"
-              aria-label="Previous hero slide"
-              onClick={prevHero}
-            >
-              ‹
-            </button>
-            <button
-              type="button"
-              className="slider-button next"
-              aria-label="Next hero slide"
-              onClick={nextHero}
-            >
-              ›
-            </button>
-
-            <div className="slider-dots" aria-hidden="true">
-              {heroSlides.map((slide, index) => (
-                <span key={slide.alt} className={index === heroIndex ? 'active' : ''} />
-              ))}
-            </div>
-          </div>
+        <div className="container hero-content">
+          <h1 className="hero-title">
+            PT. Prisma Cahaya
+            <span className="hero-title-accent"> Lestari</span>
+          </h1>
+          <p className="hero-description">
+            Your trusted partner for comprehensive air conditioning, AHU modification,
+            exhaust fan installation, and MEP commissioning services across Indonesia.
+          </p>
         </div>
       </section>
 
-      <section className="section intro">
+      <section className="section intro" id="services-overview">
         <div className="container centered narrow">
-          <p className="subtitle">PT BUKAKAINTI AIRCON</p>
+          <p className="subtitle">PT. Prisma Cahaya Lestari</p>
           <h2>
-            Your Ultimate <span>HVAC Solution</span>
+            Your Trusted <span>MEP Partner</span>
           </h2>
-          <p className="subtitle subtle">Our Clients, Our Success</p>
+          <p className="subtitle subtle">Professional Services Since Day One</p>
           <h3>
-            +19 Years of <span>HVAC Expertise</span>
+            Expert <span>Installation & Commissioning</span>
           </h3>
           <p>
-            Specializing in Heating, Ventilating, & Air Conditioning (HVAC)
-            solutions, PT. BUKAKAINTI AIRCON is a renowned HVAC contractor with a
-            19-year legacy of experience. As your trusted partner in HVAC
-            Installation, Service, Procurement, and Purchase, we excel in diverse
-            chiller system projects based on your needs.
+            Specializing in air conditioning works, AHU modification & UV filter installation,
+            exhaust fan systems, volume damper supply & installation, ceiling reconditioning,
+            and comprehensive testing & commissioning. Based in Surabaya, serving projects
+            across Indonesia.
           </p>
         </div>
       </section>
@@ -153,11 +113,10 @@ function HomePage() {
             Our <span>Customers & Clients</span>
           </h2>
           <p className="section-copy">
-            Our performance and achievements extend to every HVAC project based on
-            your needs. Including central AC installations in commercial buildings
-            such as offices, hotels, shopping centers, mixed-use properties, and
-            various segments like food and beverage, hospitals, pharmaceuticals,
-            packaging, palm oil, and more.
+            Our performance and achievements extend to every MEP project tailored to
+            your needs. Including installations in commercial buildings such as
+            offices, hotels, shopping centers, mixed-use properties, and various
+            industrial segments.
           </p>
 
           <div className="logo-grid">
@@ -169,12 +128,10 @@ function HomePage() {
           </div>
 
           <a
-            href="https://bukakainti.com/references/"
+            href="/contacts"
             className="button"
-            target="_blank"
-            rel="noreferrer"
           >
-            View Project Reference
+            Contact Us
           </a>
         </div>
       </section>
@@ -183,14 +140,13 @@ function HomePage() {
         <div className="container centered">
           <p className="subtitle">We're Committed To Perfection</p>
           <h2>
-            Why Should You Choose <span>PT BUKAKAINTI AIRCON?</span>
+            Why Choose <span>PT. Prisma Cahaya Lestari?</span>
           </h2>
           <p className="section-copy">
-            From seamless installations to responsive and efficient services, we
-            only prioritize your satisfaction. With years of expertise, we offer
-            top-tier heating, ventilating, and air conditioning solutions. Choose us
-            for reliable, fast, and proficient all-in-one HVAC services, ensuring
-            ultimate comfort for your building.
+            From precise installations to responsive and efficient services, we
+            only prioritize your satisfaction. With our expertise, we offer
+            top-tier MEP solutions. Choose us for reliable, fast, and proficient
+            all-in-one installation and commissioning services.
           </p>
 
           <div className="reason-grid">
@@ -238,16 +194,14 @@ function HomePage() {
 
       <section className="section values">
         <div className="container centered">
-          <p className="subtitle">Guiding Principles for a Sustainable Future</p>
+          <p className="subtitle">Guiding Principles for Excellence</p>
           <h2>
             Our Core <span>Values</span>
           </h2>
           <p className="section-copy">
-            From seamless installations to responsive and efficient services, we
-            only prioritize your satisfaction. With years of expertise, we offer
-            top-tier heating, ventilating, and air conditioning solutions. Choose us
-            for reliable, fast, and proficient all-in-one HVAC services, ensuring
-            ultimate comfort for your building.
+            From precise installations to responsive and efficient services, we
+            only prioritize your satisfaction. Our values drive every project
+            we undertake, ensuring quality, safety, and client success.
           </p>
 
           <div className="values-grid">
@@ -261,62 +215,6 @@ function HomePage() {
               >
                 <h3>{value.title}</h3>
                 <p>{value.description}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section news">
-        <div className="container centered">
-          <p className="subtitle">Advice to clients</p>
-          <h2>News & Articles</h2>
-
-          <div className="news-grid">
-            {newsArticles.map((article) => (
-              <article key={article.title} className="news-card">
-                <a href={article.href} target="_blank" rel="noreferrer">
-                  <img src={article.image} alt={article.title} loading="lazy" />
-                </a>
-                <div className="news-meta">
-                  <span>{article.date}</span>
-                </div>
-                <h4>
-                  <a href={article.href} target="_blank" rel="noreferrer">
-                    {article.title}
-                  </a>
-                </h4>
-              </article>
-            ))}
-          </div>
-
-          <a
-            href="https://bukakainti.com/news/"
-            className="button"
-            target="_blank"
-            rel="noreferrer"
-          >
-            View More Posts
-          </a>
-        </div>
-      </section>
-
-      <section className="section videos">
-        <div className="container centered">
-          <h2>Get the best Video stories</h2>
-
-          <div className="video-grid">
-            {videoStories.map((story) => (
-              <article key={story.title} className="video-card">
-                <a href={story.href} target="_blank" rel="noreferrer">
-                  <img src={story.image} alt={story.title} loading="lazy" />
-                </a>
-                <h4>
-                  <a href={story.href} target="_blank" rel="noreferrer">
-                    {story.title}
-                  </a>
-                </h4>
-                <p>{story.source}</p>
               </article>
             ))}
           </div>
