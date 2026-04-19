@@ -72,30 +72,12 @@ export const featureCards = [
 ]
 
 export const clientLogos = [
-  '/assets/images/logos/IKEA.webp',
-  '/assets/images/logos/c01.webp',
-  '/assets/images/logos/c11.webp',
-  '/assets/images/logos/c10.webp',
-  '/assets/images/logos/c09.webp',
-  '/assets/images/logos/mandiri-1.webp',
-  '/assets/images/logos/c13.webp',
-  '/assets/images/logos/PP.webp',
-  '/assets/images/logos/Kalbe.webp',
-  '/assets/images/logos/wika.webp',
-  '/assets/images/logos/c03.webp',
-  '/assets/images/logos/astra.webp',
-  '/assets/images/logos/lemfox.webp',
-  '/assets/images/logos/c04.webp',
-  '/assets/images/logos/c14.webp',
-  '/assets/images/logos/c05.webp',
-  '/assets/images/logos/c07.webp',
-  '/assets/images/logos/c08.webp',
-  '/assets/images/logos/c15.webp',
-  '/assets/images/logos/waskita.webp',
-  '/assets/images/logos/c16.webp',
-  '/assets/images/logos/c02.webp',
-  '/assets/images/logos/hdc.webp',
-  '/assets/images/logos/taspen.webp',
+  { path: '/assets/images/logos/cimb1-removebg-preview.png', name: 'CIMB Niaga' },
+  { path: '/assets/images/logos/majapahit1-removebg-preview.png', name: 'Hotel Majapahit Surabaya' },
+  { path: '/assets/images/logos/westin1-removebg-preview.png', name: 'The Westin Resort Nusa Dua Bali' },
+  { path: '/assets/images/logos/itdc1-removebg-preview.png', name: 'InterContinental Bali Resort' },
+  { path: '/assets/images/logos/hardrock1-removebg-preview.png', name: 'Hard Rock Hotel Bali' },
+  { path: '/assets/images/logos/bentul1-removebg-preview.png', name: 'Bentoel Group' },
 ]
 
 export const chooseReasons = [
@@ -302,6 +284,13 @@ export const serviceItems = [
 
 export const serviceStatsIntro =
   'PT. Prisma Cahaya Lestari is where expertise meets excellence. We have an excellent reputation for quality MEP installation and provide responsive service to satisfy our loyal customers.'
+
+export const serviceStats = [
+  { value: 95, suffix: '%', label: 'Completed Services' },
+  { value: 150, suffix: '+', label: 'Projects Done' },
+  { value: 15, suffix: '+', label: 'Years Experience' },
+  { value: 50, suffix: '+', label: 'Satisfied Clients' },
+]
 
 export const galleryProjects = [
   {

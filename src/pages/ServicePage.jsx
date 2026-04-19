@@ -2,9 +2,11 @@ import {
   serviceIntro,
   serviceItems,
   serviceStatsIntro,
+  serviceStats,
   serviceTeam,
 } from '../data/siteData'
 import { useScrollReveal } from '../hooks/useScrollReveal'
+import CountUpStat from '../components/CountUpStat'
 
 function ServicePage() {
   const revealRef = useScrollReveal()
@@ -51,9 +53,16 @@ function ServicePage() {
 
       <section className="section service-stats-section">
         <div className="container centered narrow">
-          <p className="subtitle">Success Rating</p>
-          <h2>Our Data Statistic Results</h2>
+          <p className="subtitle">SUCCESS RATING</p>
+          <h2>Our Data Statistic <span>Results</span></h2>
           <p>{serviceStatsIntro}</p>
+        </div>
+        <div className="container">
+          <div className="stat-grid">
+            {serviceStats.map((stat, index) => (
+              <CountUpStat key={stat.label} stat={stat} index={index} />
+            ))}
+          </div>
         </div>
       </section>
     </main>

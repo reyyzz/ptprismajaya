@@ -119,12 +119,21 @@ function HomePage() {
             industrial segments.
           </p>
 
-          <div className="logo-grid">
-            {clientLogos.map((logoPath) => (
-              <figure key={logoPath} className="logo-card">
-                <img src={logoPath} alt="Client logo" loading="lazy" />
-              </figure>
-            ))}
+          <div className="logo-grid-wrapper">
+            <div className="logo-row logo-row-top">
+              {clientLogos.slice(0, 3).map((logo) => (
+                <figure key={logo.name} className="logo-card">
+                  <img src={logo.path} alt={logo.name} loading="lazy" />
+                </figure>
+              ))}
+            </div>
+            <div className="logo-row logo-row-bottom">
+              {clientLogos.slice(3).map((logo) => (
+                <figure key={logo.name} className="logo-card">
+                  <img src={logo.path} alt={logo.name} loading="lazy" />
+                </figure>
+              ))}
+            </div>
           </div>
 
           <a
