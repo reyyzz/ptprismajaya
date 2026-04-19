@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
-import { navigationItems, officeContacts, socialLinks } from '../data/siteData'
+import { navigationItems, socialLinks } from '../data/siteData'
 
 function SiteLayout() {
   const location = useLocation()
   const [mobileMenuOpenPath, setMobileMenuOpenPath] = useState(null)
   const [isScrolled, setIsScrolled] = useState(false)
   const isMobileMenuOpen = mobileMenuOpenPath === location.pathname
-  const isHome = location.pathname === '/'
 
   useEffect(() => {
     const handleScroll = () => {

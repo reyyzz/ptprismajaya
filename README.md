@@ -1,16 +1,54 @@
-# React + Vite
+# PT Prisma Cahaya Lestari Website (SSR)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project now uses React + Vite with Server-Side Rendering (SSR) via an Express server.
 
-Currently, two official plugins are available:
+## Run Locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+Open `http://localhost:5173`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Build Production
 
-## Expanding the ESLint configuration
+```bash
+npm run build
+npm run preview
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Scripts
+
+- `npm run dev`: run SSR server in development mode
+- `npm run build`: build client and server bundles
+- `npm run preview`: run SSR server from production build
+- `npm run lint`: run ESLint
+
+## SEO Files
+
+- `public/robots.txt`
+- `public/sitemap.xml`
+- `scripts/generate-sitemap.mjs`
+
+Regenerate sitemap:
+
+```bash
+npm run sitemap
+```
+
+If your domain is not `https://prismacahayalestari.com`, update both files.
+
+## Deployment Notes
+
+This app requires a Node.js runtime for SSR.
+
+- Suitable: Vercel, Render, Railway, VPS, or any Node hosting.
+- Not suitable for SSR: GitHub Pages (static hosting only).
+
+## Google Search Console Checklist
+
+1. Deploy site to your production domain.
+2. Add and verify the domain in Google Search Console.
+3. Submit sitemap URL: `https://your-domain.com/sitemap.xml`.
+4. Use URL Inspection for `/`, `/profile/about-us`, `/profile/service`, `/gallery`, `/contacts`.

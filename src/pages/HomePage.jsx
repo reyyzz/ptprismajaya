@@ -32,7 +32,6 @@ function HomePage() {
     return () => window.clearInterval(timerId)
   }, [])
 
-  const currentHero = useMemo(() => heroSlides[heroIndex], [heroIndex])
   const currentTestimonial = useMemo(
     () => testimonials[testimonialIndex],
     [testimonialIndex],
